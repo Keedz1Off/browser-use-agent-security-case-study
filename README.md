@@ -18,10 +18,10 @@ Assessed: Browser Use **0.13.13**; snapshot `aa093a8`; inspected dispatcher bubu
 
 ## Read in order
 
-1. [Case study and classifications](CASE-STUDY.md)
+1. [Reading guide and file map](READING-GUIDE.md)
 2. [Architecture and observed flows](FLOW.md)
-3. [Measured evidence](evidence/coverage.json) and [four failure records](evidence/failures.json)
-4. [Объяснение и подготовка к разговору](EXPLAIN-RU.md)
+3. [Case study and classifications](CASE-STUDY.md)
+4. [Measured evidence](evidence/coverage.json) and [four failure records](evidence/failures.json)
 5. [Source pins](evidence/source-pins.json) · [offline verification](VERIFY.md)
 
 Independent, AI-assisted assessment. No vendor affiliation, accepted bounty, CVE, complete-audit claim or general prompt-injection-resistance claim. No product tests were executed during this packaging update.

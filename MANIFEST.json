@@ -19,9 +19,9 @@
       "bytes": 2485,
       "sha256": "349622416bc21b1d4a9bfe8aeb187a585d3382a76b10ef590e1d3ef61ee2fed0"
     },
-    "EXPLAIN-RU.md": {
-      "bytes": 6087,
-      "sha256": "3827c7b51b91bf55b6aa8c8346ebd66e0f587baa26eb0d413012c395e36a150d"
+    "READING-GUIDE.md": {
+      "bytes": 4823,
+      "sha256": "fc47e1e10c529103dc48a8a44142d147f2452696785b03f1cef13be6daa6457a"
     },
     "FLOW.md": {
       "bytes": 2643,
@@ -32,8 +32,8 @@
       "sha256": "dd46b8b43381292a8c94421498c4e44c9176070f474586f31126b9023188ad83"
     },
     "README.md": {
-      "bytes": 1967,
-      "sha256": "81930bf83fa89dbc8450bd86b41a5231db9246b2f67fbf3641ec36f655ec18e4"
+      "bytes": 1930,
+      "sha256": "e1790276acf5e39167542cca8c8e82dc996a6cf05931e14e2a97d0fd729fcdae"
     },
     "VERIFY.md": {
       "bytes": 515,
