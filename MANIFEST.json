@@ -1,0 +1,47 @@
+{
+  "package_type": "documentation-only assessment case study",
+  "documentation_date": "2026-10-23",
+  "source_and_results": "Selected historical evidence; no new target execution",
+  "files": {
+    "CASE-STUDY.md": {
+      "bytes": 5500,
+      "sha256": "a9e1dd81000309880cbaf4b6b746531aa1f71e595033e74703f9521919b2e0fd"
+    },
+    "evidence/coverage.json": {
+      "bytes": 627,
+      "sha256": "633c278d301719a1a96ecdf315063d3a59c7c1f313a5e8bcee4338a74c11b660"
+    },
+    "evidence/failures.json": {
+      "bytes": 2729,
+      "sha256": "d32eac8087eca036ca738e22542b1c759852c0a0828fc8b3d04a93dd51f84028"
+    },
+    "evidence/source-pins.json": {
+      "bytes": 2485,
+      "sha256": "349622416bc21b1d4a9bfe8aeb187a585d3382a76b10ef590e1d3ef61ee2fed0"
+    },
+    "EXPLAIN-RU.md": {
+      "bytes": 6087,
+      "sha256": "3827c7b51b91bf55b6aa8c8346ebd66e0f587baa26eb0d413012c395e36a150d"
+    },
+    "FLOW.md": {
+      "bytes": 2643,
+      "sha256": "dc87cff2d84faf25f3fe7678799e8116debf35d1a07d1d7e7e973b6029e0a5bd"
+    },
+    "NOTICE.md": {
+      "bytes": 731,
+      "sha256": "dd46b8b43381292a8c94421498c4e44c9176070f474586f31126b9023188ad83"
+    },
+    "README.md": {
+      "bytes": 1967,
+      "sha256": "81930bf83fa89dbc8450bd86b41a5231db9246b2f67fbf3641ec36f655ec18e4"
+    },
+    "VERIFY.md": {
+      "bytes": 515,
+      "sha256": "c9f40ff1aadb697ee02649a5c2e32c5996eafe1ef25abde6da72043e92730ce5"
+    },
+    "verify_package.py": {
+      "bytes": 1853,
+      "sha256": "af486fe891111d71fbc7628933a37ce727fd1806aafe309078f25d97372cc093"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "scope": "Latest logical results across historical executions, not a new 231-test run",
+  "baseline": {
+    "total": 177,
+    "passed": 173,
+    "failure": 4
+  },
+  "owned_auth_mcp_latest": {
+    "total": 42,
+    "passed": 42
+  },
+  "chrome_latest": {
+    "total": 12,
+    "passed": 12,
+    "replayed_controls": 11,
+    "new_distinct_control": 1
+  },
+  "latest_total": 231,
+  "latest_passed": 227,
+  "retained_failed_assertions": 4,
+  "this_revision_new_product_tests": 0,
+  "this_revision_new_llm_calls": 0,
+  "chrome_product_latest": "Chrome/155.0.8059.86",
+  "new_vulnerabilities_confirmed": 0
+}

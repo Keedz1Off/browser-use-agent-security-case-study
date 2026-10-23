@@ -1,0 +1,59 @@
+{
+  "project": "Browser Use",
+  "version": "0.13.13",
+  "revision": "aa093a843da5edbf323c0b4145c9b6a0db3ecde8",
+  "repository": "https://github.com/browser-use/browser-use",
+  "dispatcher_version": "1.5.6",
+  "source_and_dependency_fingerprints": [
+    {
+      "path": "browser_use/browser/profile.py",
+      "sha256": "bfde61945a078751cbfb2b8052daf608b3b03385e374dd741d009ac696a23c18"
+    },
+    {
+      "path": "browser_use/browser/watchdogs/security_watchdog.py",
+      "sha256": "750434815176a4a10f63aec4c988d3d544fe52a96f88be7e465e8403109d596e"
+    },
+    {
+      "path": "browser_use/browser/session.py",
+      "sha256": "886ae6c3372ba220cf09cb0a5c8f1ad1fe49ad00c7c92357495d68c70ebbffb6"
+    },
+    {
+      "path": "browser_use/browser/watchdog_base.py",
+      "sha256": "d90072a6cb0e8fcb506e953c59c416d5934adab31e2b3e7f9b7a1f97f02fc15f"
+    },
+    {
+      "path": "browser_use/tools/service.py",
+      "sha256": "d22ada0c757f4b9aecd5d78267f76b618c644699ec155cd25ab1bfb059423429"
+    },
+    {
+      "path": "skills/open-source/references/browser.md",
+      "sha256": "9b5998871d0ec97871b90315e4fe79fba923a3c9c02d0f2372d754fe22e828bf"
+    },
+    {
+      "path": "tests/ci/security/test_domain_filtering.py",
+      "sha256": "d0fc1dbec09a2f3d718d46a1b717fd73a9b3f953525ee16cabfb4638b03b5e18"
+    },
+    {
+      "path": "installed:bubus/service.py",
+      "sha256": "bc75a324dda43b579ada0bdd51e09a466288160209889eeea46764a5ee10bcbe"
+    },
+    {
+      "path": "reviewer:phase2/tests/test_local_browser_policy.py",
+      "sha256": "86c6a5398d1e7796ff3210cc914188f20ffa6e52622611c44c00c0f0d2f83b8d"
+    },
+    {
+      "path": "reviewer:phase2/tests/conftest.py",
+      "sha256": "ee659c82bc6ecfbab525f8c30a24084d0eb1e40b8db80f84ac16dfde835adc9a"
+    }
+  ],
+  "classification": {
+    "navigation_error_returned": true,
+    "pre_navigation_rejection_intent_held_for_recorded_request": false,
+    "zero_network_traffic_guarantee_found_in_scoped_documentation": false,
+    "security_vulnerability_confirmed": false,
+    "broader_security_classification": "deferred"
+  },
+  "source_explanation": "Independent policy and navigation event handlers plus aggregate error reporting allow an error result to coexist with an already-issued operation.",
+  "limit": "Retained log order and XML reviewed; no new browser execution, no full scheduler timing trace and no exploit reproduction.",
+  "release_history": "Snapshot-specific assessment; no first affected or fixed release range verified."
+}
