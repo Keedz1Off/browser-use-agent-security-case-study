@@ -12,7 +12,7 @@ Browser Use packages the trusted task and browser state for a model. The model p
 
 The navigation test called a tool directly from trusted test code. It **did not use the Agent/LLM loop**. Allowed and excluded hostnames resolved to an owned synthetic loopback backend. The receiver's request list was fresh for each test.
 
-## Vulnerability Details
+## Observed defect
 
 No report-ready security vulnerability is claimed. The retained behavioral failure was:
 
@@ -23,7 +23,7 @@ No report-ready security vulnerability is claimed. The retained behavioral failu
 
 Cleanup to about:blank cannot undo a request already received. Conversely, the [navigation policy field](https://github.com/browser-use/browser-use/blob/aa093a843da5edbf323c0b4145c9b6a0db3ecde8/browser_use/browser/profile.py#L628) is not documentation of universal all-protocol egress filtering.
 
-## Exploitability Analysis
+## Security impact and limits
 
 | Observation | Supported conclusion | Unsupported conclusion |
 | --- | --- | --- |
@@ -36,7 +36,7 @@ Cleanup to about:blank cannot undo a request already received. Conversely, the [
 
 The model corpus allowed only the done action. Its output records cannot establish a forbidden network action, and they cannot be joined to the separate direct-tool navigation case as one attack chain.
 
-## Proof of Concept
+## Recorded validation evidence
 
 This documentation-only bundle includes sanitized failure records and source references, **not an executable exploit**. No target execution was performed when preparing it.
 

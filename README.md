@@ -4,7 +4,7 @@
 
 **Result:** an owned destination received a request even though the navigation tool returned a policy error. This is a demonstrated behavioral defect in pre-navigation rejection, **not a confirmed exploitable vulnerability**. Three other failed assertions were answer-format failures, not demonstrated prompt-injection success.
 
-Assessed: Browser Use **0.13.13**; snapshot `aa093a8`; inspected dispatcher bubus **1.5.6**. Assessment records predate this documentation update on 23 October 2026.
+Assessed: Browser Use **0.13.13**; snapshot `aa093a8`; inspected dispatcher bubus **1.5.6**. Assessment records predate this documentation update on 25 October 2026.
 
 ## Work performed
 
