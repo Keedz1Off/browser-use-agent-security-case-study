@@ -1,5 +1,11 @@
 # Browser Use: reading guide
 
+## Pick a reading depth
+
+- **Two minutes:** README → the normal and observed diagrams in [FLOW.md](FLOW.md).
+- **Technical review:** [CASE-STUDY.md](CASE-STUDY.md) → [failure records](evidence/failures.json) → [source pins](evidence/source-pins.json).
+- **Package verification:** [VERIFY.md](VERIFY.md). This checks package integrity, not product behavior.
+
 ## Where to start
 
 Read README.md for the summary, FLOW.md for the architecture, and CASE-STUDY.md for the expected behavior, observed result, and impact assessment. Use the evidence files to check the underlying measurements.

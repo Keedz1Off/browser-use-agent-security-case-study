@@ -6,6 +6,21 @@
 
 Assessed: Browser Use **0.13.13**; snapshot `aa093a8`; inspected dispatcher bubus **1.5.6**. Assessment records predate this documentation update on 25 October 2026.
 
+## Quick orientation
+
+```mermaid
+flowchart LR
+    U["Task and page data"] --> A["Agent / LLM proposes an action"]
+    A --> T["Tool and BrowserSession"]
+    T --> P["Policy handler"]
+    T --> B["Browser handler / Chrome"]
+    B --> R["Owned HTTP receiver"]
+```
+
+**Boundary being checked:** a policy rejection should prevent the excluded navigation request. The retained local case contains both a tool policy error and a receiver-side GET. The arrows show components, not a measured ordering of the handlers.
+
+**Reading route:** [flow](FLOW.md) → [expected vs observed behavior](CASE-STUDY.md) → [failure evidence](evidence/failures.json). For the full file map, use [READING-GUIDE.md](READING-GUIDE.md).
+
 ## Work performed
 
 - Mapped the user-task → model → tool → event bus → browser path.
