@@ -28,12 +28,12 @@
       "sha256": "dd46b8b43381292a8c94421498c4e44c9176070f474586f31126b9023188ad83"
     },
     "READING-GUIDE.md": {
-      "bytes": 5187,
-      "sha256": "da314aaa58855a4393e9baed5c88055280c57785a00741d35b29aa12ad0bd9aa"
+      "bytes": 804,
+      "sha256": "af22df76d8fbdf8116ae25695656d5d43d9cb26fc0e9847144ec5fa091aecb44"
     },
     "README.md": {
-      "bytes": 2641,
-      "sha256": "49aacee84adbbb61058357960f81f117a181f50d811f1febe18f4bd7276a1059"
+      "bytes": 1215,
+      "sha256": "4cd12657fca8773311d9c6978d7d02558e1b27cee335b50f1b888ed733664154"
     },
     "VERIFY.md": {
       "bytes": 515,
@@ -42,8 +42,12 @@
     "verify_package.py": {
       "bytes": 1853,
       "sha256": "af486fe891111d71fbc7628933a37ce727fd1806aafe309078f25d97372cc093"
+    },
+    "matrices/boundaries.json": {
+      "bytes": 4738,
+      "sha256": "23c0b6c4378c0fcca75a92a273709acb5f6833556676f79d017844318de06b39"
     }
   },
-  "navigation_update_date": "2026-10-31",
-  "navigation_update_scope": "README diagrams and reading guidance; historical target results unchanged; no new target execution"
+  "navigation_update_date": "2026-11-02",
+  "navigation_update_scope": "Portfolio readability and evidence indexing; no new target execution."
 }
