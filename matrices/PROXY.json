@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "PROXY",
+  "title": "Separate Chrome proxy controls",
+  "project": "Browser Use",
+  "scope": "Browser Use 0.13.13, aa093a8; selected local controls.",
+  "evidence_state": "Retained historical results and source analysis; per-row status and limits apply.",
+  "source_pins": "https://github.com/Keedz1Off/browser-use-agent-security-case-study/blob/9ce70f92118289996a3c394f27928ffd60da2c16/evidence/source-pins.json",
+  "evidence_snapshot": {
+    "commit": "9ce70f92118289996a3c394f27928ffd60da2c16",
+    "url": "https://github.com/Keedz1Off/browser-use-agent-security-case-study/tree/9ce70f92118289996a3c394f27928ffd60da2c16"
+  },
+  "interpretation": "This matrix indexes existing evidence. Rows are not additional tests, and no structural or security closure is inferred from a PASS count.",
+  "rows": [
+    {
+      "id": "BU-PROXY",
+      "boundary": "Chrome -> separately configured explicit proxy",
+      "invariant": "The selected proxy rules must hold in this configuration.",
+      "scenario": "Separate Chrome/proxy controls.",
+      "oracle": "Recorded control results.",
+      "observed": "12 selected controls passed.",
+      "status": "scoped_configuration_controls_passed",
+      "evidence": [
+        {
+          "url": "https://github.com/Keedz1Off/browser-use-agent-security-case-study/blob/9ce70f92118289996a3c394f27928ffd60da2c16/evidence/coverage.json",
+          "pointer": "/chrome_latest"
+        },
+        {
+          "url": "https://github.com/Keedz1Off/browser-use-agent-security-case-study/blob/9ce70f92118289996a3c394f27928ffd60da2c16/CASE-STUDY.md"
+        }
+      ],
+      "limits": "These controls do not demonstrate a fix for BU-NAV or all-protocol network isolation."
+    }
+  ]
+}

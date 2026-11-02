@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "MCP-AUTH",
+  "title": "Owned application authorization",
+  "project": "Browser Use",
+  "scope": "Browser Use 0.13.13, aa093a8; selected local controls.",
+  "evidence_state": "Retained historical results and source analysis; per-row status and limits apply.",
+  "source_pins": "https://github.com/Keedz1Off/browser-use-agent-security-case-study/blob/9ce70f92118289996a3c394f27928ffd60da2c16/evidence/source-pins.json",
+  "evidence_snapshot": {
+    "commit": "9ce70f92118289996a3c394f27928ffd60da2c16",
+    "url": "https://github.com/Keedz1Off/browser-use-agent-security-case-study/tree/9ce70f92118289996a3c394f27928ffd60da2c16"
+  },
+  "interpretation": "This matrix indexes existing evidence. Rows are not additional tests, and no structural or security closure is inferred from a PASS count.",
+  "rows": [
+    {
+      "id": "BU-AUTH",
+      "boundary": "Synthetic MCP caller -> application data",
+      "invariant": "The owned application's identity, scope, tenant and ownership rules must be enforced.",
+      "scenario": "Selected positive and negative authorization controls in an owned MCP fixture.",
+      "oracle": "Instrumented server-side authorization/data access, as summarized in the assessment.",
+      "observed": "42 historical checks passed.",
+      "status": "scoped_fixture_controls_passed",
+      "evidence": [
+        {
+          "url": "https://github.com/Keedz1Off/browser-use-agent-security-case-study/blob/9ce70f92118289996a3c394f27928ffd60da2c16/evidence/coverage.json",
+          "pointer": "/owned_auth_mcp_latest"
+        },
+        {
+          "url": "https://github.com/Keedz1Off/browser-use-agent-security-case-study/blob/9ce70f92118289996a3c394f27928ffd60da2c16/CASE-STUDY.md"
+        }
+      ],
+      "limits": "The public bundle has aggregate results, not all raw test traces. This is fixture policy, not built-in Browser Use authorization."
+    }
+  ]
+}

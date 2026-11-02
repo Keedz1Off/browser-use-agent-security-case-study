@@ -12,10 +12,19 @@ Browser Use operates Chrome through tools. In a local check, the navigation tool
 
 Three other failed assertions were answer-format failures, not confirmed prompt injection.
 
-## Evidence and details
+**Flow:** Navigation tool → policy and browser handlers → owned HTTP receiver.
 
-[Boundary matrix](matrices/boundaries.json) · [Flow](FLOW.md) · [Case study](CASE-STUDY.md) · [Failure records](evidence/failures.json)
+## Matrices
 
-Snapshot: Browser Use 0.13.13, `aa093a8`. [Source pins](evidence/source-pins.json) · [File map](READING-GUIDE.md) · [Package check](VERIFY.md) · [Attribution / AI assistance](NOTICE.md).
+| Boundary | JSON |
+| --- | --- |
+| Navigation policy | [NAVIGATION](matrices/NAVIGATION.json) |
+| Restricted model output | [MODEL-OUTPUT](matrices/MODEL-OUTPUT.json) |
+| Owned application authorization | [MCP-AUTH](matrices/MCP-AUTH.json) |
+| Separate Chrome proxy controls | [PROXY](matrices/PROXY.json) |
 
-Historical results; no new target execution in this documentation edit.
+Read each row as: **invariant → scenario → oracle → observation → status → evidence → limit**.
+
+[Detailed report, tests, logs and source pins](https://github.com/Keedz1Off/browser-use-agent-security-case-study/tree/9ce70f92118289996a3c394f27928ffd60da2c16) are preserved in the pinned evidence snapshot. Matrix links open the exact supporting records.
+
+Browser Use 0.13.13, aa093a8; selected local controls. Independent, AI-assisted work. Documentation reorganisation only; no new target tests. [File inventory](package-manifest.json).
