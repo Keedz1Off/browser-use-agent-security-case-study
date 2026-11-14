@@ -1,29 +1,50 @@
 {
   "format": "matrix-first portfolio package",
-  "date": "2026-11-02",
-  "scope": "Documentation-only visible JSON matrix index; no new target tests",
+  "date": "2026-11-14",
+  "scope": "Boundary matrices, recorded evidence and offline checks",
   "evidence_snapshot": "9ce70f92118289996a3c394f27928ffd60da2c16",
   "matrix_count": 4,
   "files": {
-    "matrices/NAVIGATION.json": {
-      "bytes": 1937,
-      "sha256": "e75f4061dd32d1259d905fdeb1037ec3339d80df505a1a8205cdc68b06f27586"
+    "evidence/coverage.json": {
+      "bytes": 627,
+      "sha256": "633c278d301719a1a96ecdf315063d3a59c7c1f313a5e8bcee4338a74c11b660"
     },
-    "matrices/MODEL-OUTPUT.json": {
-      "bytes": 3061,
-      "sha256": "1adbea239a781e77c7ee788691f6c9a06e461d6563d7a33ffe9603455f6329c4"
+    "evidence/failures.json": {
+      "bytes": 2729,
+      "sha256": "d32eac8087eca036ca738e22542b1c759852c0a0828fc8b3d04a93dd51f84028"
+    },
+    "matrices/boundaries.json": {
+      "bytes": 5608,
+      "sha256": "a6022dbb46dfcd89c0b7ad5504e3876d7a5f112881eb6ad84a4ed2cf7c610374"
     },
     "matrices/MCP-AUTH.json": {
-      "bytes": 1921,
-      "sha256": "cb0fb00348c0af36ff71ef3716f98c3e474dc8868e95870be39f51701d0128a4"
+      "bytes": 1956,
+      "sha256": "9eeec894cf54868c17ac80ad6182e6a1d92dae92e99a3c5859f955660a211830"
+    },
+    "matrices/MODEL-OUTPUT.json": {
+      "bytes": 3125,
+      "sha256": "8fb5dbf5b70f30837e7dd30ecb4e2d4d1801a1e14f2ead77e17bc96c0c31285c"
+    },
+    "matrices/NAVIGATION.json": {
+      "bytes": 1973,
+      "sha256": "a34c65d66f1e3089a87b910e3728cf39e340bc801371b5b1a5f210678bf55de1"
     },
     "matrices/PROXY.json": {
-      "bytes": 1744,
-      "sha256": "1496695022215e50cc785a7dda3b41aa20ee0f00ac1dc7972d971db989eac761"
+      "bytes": 1779,
+      "sha256": "78e3b0593a341f4db355ea2dec4c00927c12b1e02aaf16e23d2f51ec51ce832f"
     },
     "README.md": {
-      "bytes": 2618,
-      "sha256": "631c8324829674b2206d3c0bb454377afd7b7ad9007c753b11253afc793470bb"
+      "bytes": 3200,
+      "sha256": "1db76d05b8882dbf309444d3baebfb58db4c3d3003b460eaa1360e6316a7a14f"
+    },
+    "tests/test_recorded_evidence.py": {
+      "bytes": 2441,
+      "sha256": "95b2abbf6d7345509821f54a4a84d3bad7dac371c31b3ea81a48b762f9336042"
+    },
+    "tests/trace_oracle.py": {
+      "bytes": 1122,
+      "sha256": "57d9bb56c2202e8e2de229e8984263187a113a6aa6f63142310b7671c200241c"
     }
-  }
+  },
+  "boundary_index": "matrices/boundaries.json"
 }

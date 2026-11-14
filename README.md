@@ -12,6 +12,18 @@ Browser Use operates Chrome through tools. In a local check, the navigation tool
 
 Three other failed assertions were answer-format failures, not confirmed prompt injection.
 
+## Boundaries, tests and evidence
+
+Open the [boundary index](matrices/boundaries.json), then [recorded navigation and format outcomes](evidence/failures.json) and [coverage](evidence/coverage.json). [Python tests](tests/test_recorded_evidence.py) check the saved records and exercise the [trace oracle](tests/trace_oracle.py) with synthetic input. The public revision contains these offline checks and selected historical records.
+
+Run the offline evidence checks from the repository root with Python 3.10 or later.
+
+```sh
+python -B -m unittest discover -s tests -v
+```
+
+These checks read saved files and do not launch the assessed application.
+
 ## Flow
 
 ```mermaid
@@ -45,8 +57,8 @@ Read the summary and flow, then choose a JSON matrix above. Expand **Technical d
 2. Open [NAVIGATION](matrices/NAVIGATION.json), row `BU-NAV`. Compare `invariant` (required rule), `scenario` (test input), `oracle` (measurement) and `observed` (result).
 3. Follow `evidence[].url` to the supporting record; `pointer`, when present, selects a nested JSON entry. Read `status` together with `limits` before judging impact. The other matrices cover separate controls.
 
-[Evidence archive: detailed report, tests, logs and source pins](https://github.com/Keedz1Off/browser-use-agent-security-case-study/tree/9ce70f92118289996a3c394f27928ffd60da2c16) are preserved in the pinned evidence snapshot. Matrix links open the exact supporting records.
+[Evidence archive: detailed report and recorded results](https://github.com/Keedz1Off/browser-use-agent-security-case-study/tree/9ce70f92118289996a3c394f27928ffd60da2c16) are preserved in the pinned evidence snapshot. Matrix links open the exact supporting records.
 
-Browser Use 0.13.13, aa093a8; selected local controls. Independent, AI-assisted work. Documentation reorganisation only; no new target tests. [File inventory](package-manifest.json).
+Browser Use 0.13.13, aa093a8; selected local controls. Independent, AI-assisted work. [File inventory](package-manifest.json).
 
 </details>
