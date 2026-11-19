@@ -1,0 +1,77 @@
+name: Case study checks
+run-name: ${{ inputs.delivery_demo && 'CD demo' || 'Case study CI' }} · ${{ github.ref_name }}
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      delivery_demo:
+        description: "CD demo: package the verified check results"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.12"
+      - name: Verify the matrix and recorded evidence
+        shell: bash
+        run: |
+          mkdir -p results
+          python -B - <<'PY' 2>&1 | tee results/checks.log
+          import unittest
+          import json
+          from pathlib import Path
+
+          catalog = Path("matrices/boundaries.json")
+          if not catalog.is_file():
+              raise SystemExit("Missing matrix index")
+          matrices = sorted(catalog.parent.glob("*.json"))
+          for path in matrices:
+              json.loads(path.read_text(encoding="utf-8"))
+          print(f"Validated {len(matrices)} matrix JSON files.", flush=True)
+
+          suite = unittest.defaultTestLoader.discover("tests", pattern="test_recorded_evidence.py")
+          if not suite.countTestCases():
+              raise SystemExit("No tests discovered")
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          raise SystemExit(0 if result.wasSuccessful() else 1)
+          PY
+      - name: Upload check log
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: check-results
+          path: results/
+          if-no-files-found: warn
+          retention-days: 7
+      - name: Package verified results
+        if: success() && github.event_name == 'workflow_dispatch' && inputs.delivery_demo
+        shell: bash
+        run: |
+          mkdir -p delivery
+          tar -czf delivery/check-results.tar.gz results/
+          printf '%s\n' "$GITHUB_SHA" > delivery/COMMIT
+          cd delivery
+          sha256sum check-results.tar.gz > SHA256SUMS
+      - name: Upload delivery bundle
+        if: success() && github.event_name == 'workflow_dispatch' && inputs.delivery_demo
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: verified-delivery
+          path: delivery/
+          if-no-files-found: error
+          retention-days: 7

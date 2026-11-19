@@ -22,7 +22,9 @@ Run the offline evidence checks from the repository root with Python 3.10 or lat
 python -B -m unittest discover -s tests -v
 ```
 
-These checks read saved files and do not launch the assessed application.
+## GitHub Actions
+
+Open [Case study checks](https://github.com/Keedz1Off/browser-use-agent-security-case-study/actions/workflows/checks.yml) and click **Run workflow**. CI reads the matrix JSON and checks the saved evidence offline. The run saves a `check-results` log. Select **CD demo** to also download `verified-delivery` with the log, commit SHA and checksum after checks pass.
 
 ## Flow
 
